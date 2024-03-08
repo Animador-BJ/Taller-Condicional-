@@ -1,4 +1,4 @@
-# Programa que indica el IMC y su clasificación
+40# Programa que indica el IMC y su clasificación
 
 # Input
 Peso = int(input("Ingrese su peso actual: "))
