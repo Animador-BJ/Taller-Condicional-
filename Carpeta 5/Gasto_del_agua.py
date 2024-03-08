@@ -1,20 +1,18 @@
-# Programa para calcular el costo de agua por m3
+# Programa para calcular el gasto de agua de una vivienda
 
 # Input
-Gasto_agua = int(input("Digite el gasto de agua en su vivienda (en m3): "))
+Gam2 = int(input("Ingrese la cantidad de m2 de agua gastados: "))
 
 # Cuota fija mensual
 cuota_fija = 10000
 
-# Variable para la cantidad de m³ que excede los primeros 50 m³ gratuitos
-exceso_m3 = max(0, Gasto_agua - 50)
-
 # Processing
-if Gasto_agua <= 50:
-    Pago = cuota_fija  # Los primeros 50 m³ son gratis
+if Gam2 <= 50:
+    costo_agua = cuota_fija 
+elif Gam2 <= 200:
+    costo_agua = (Gam2 - 50) * 2000 + cuota_fija
 else:
-    Pago = exceso_m3 * 2000 + cuota_fija
+    costo_agua = (Gam2 - 200) * 3000 + 150000 
 
-# Output 
-print(f"El dinero a pagar por el gasto del agua es: {Pago}")
-print(f"Cantidad de m³ que excede los primeros 50 m³: {exceso_m3}")
+# Output
+print(f"El gasto de agua para {Gam2} m2 es: ${costo_agua}")
